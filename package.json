@@ -1,9 +1,11 @@
 {
-  "name": "leafGeniusMonorepo",
+  "name": "@leaf-genius/monorepo",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "db:push": "turbo db:push",
+    "db:generate": "turbo db:generate",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },

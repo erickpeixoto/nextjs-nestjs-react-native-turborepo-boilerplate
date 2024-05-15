@@ -5,7 +5,7 @@ import { z } from "zod";
 const c = initContract();
 
 export const userSchema = z.object({
-  id: z.string(),
+  id: z.number(),
   name: z.string(),
   age: z.number(),
   email: z.string(),
@@ -16,15 +16,29 @@ export type User = z.infer<typeof userSchema>;
 export const contract = c.router(
   {
     users: {
-       getAll: {
+      getAll: {
         method: "GET",
         path: "/users",
         responses: {
           200: z.array(userSchema),
+        }
+       
+      },
+      create: {
+        method: "POST",
+        path: "/users",
+        body: z.object({
+          name: z.string(),
+          age: z.number(),
+          email: z.string(),
+        }),
+        responses: {
+          200: userSchema,
         },
       },
     },
   },
+
   {
     pathPrefix: "/api",
     strictStatusCode: true,

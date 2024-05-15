@@ -1,9 +1,9 @@
 "use client";
 import { client } from "ts-contract";
+import { User } from "database";
 
 export default function Page() {
   const { data } = client.users.getAll.useQuery(["users"]);
-
   return (
     <div>
       <h1>Users</h1>

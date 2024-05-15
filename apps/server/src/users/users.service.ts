@@ -1,30 +1,20 @@
 import { Injectable } from '@nestjs/common';
-import { User } from 'ts-contract';
+import { User } from 'database';
+import { PrismaService } from '../prisma.service';
 
 @Injectable()
 export class UsersService {
-  users: User[] = [
-    {
-      id: '1',
-      name: 'name',
-      age: 1,
-      email: 'email',
-    },
-    {
-      id: '2',
-      name: 'name',
-      age: 1,
-      email: 'email',
-    }
-  ];
+  
+  constructor(private prisma: PrismaService) { }
 
-    create(user: Omit<User, 'id'>) {
-      const newUser = { ...user, id: (this.users.length + 1).toString() };
-      this.users.push(newUser);
-      return newUser;
+    async create(data: Omit<User, 'id'>) {
+     const response = await this.prisma.user.create({
+        data
+      })
+      return response;
     }
 
-    findAll() {
-      return this.users;
+    getAll() {
+      return this.prisma.user.findMany();
     }
 }

@@ -10,12 +10,20 @@ export class UsersController {
   @TsRestHandler(contract.users)
   async handler() {
     return tsRestHandler(contract.users, {
-       getAll: async () => {
-        console.log('getAll');
+      getAll: async () => {
+        const users = await this.usersService.getAll();
+        console.log('Users:', users);
         return {
           status: 200,
-          body: this.usersService.findAll(),
-        }
+          body: users 
+        };
+      },
+      create: async ({ body }) => {
+        const user = await this.usersService.create(body);
+        return {
+          status: 201,
+          body: user
+        };
       }
     });
   }
