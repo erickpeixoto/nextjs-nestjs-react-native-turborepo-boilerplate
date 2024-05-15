@@ -1,0 +1,18 @@
+{
+  "name": "ts-contract",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "@ts-rest/core": "^3.45.2",
+    "typescript": "latest",
+    "zod": "^3.23.8",
+    "@repo/typescript-config": "*"
+  }
+}
