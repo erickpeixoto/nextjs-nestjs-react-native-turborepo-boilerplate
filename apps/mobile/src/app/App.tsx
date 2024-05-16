@@ -1,9 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import { apiClient } from "../../../../packages/ts-contract/src/index";
 import "@/styles/global.css";
 import { useEffect, useState } from "react";
-import { User } from "ts-contract";
+import { User, apiClient } from "ts-contract";
 
 export default function App() {
 
