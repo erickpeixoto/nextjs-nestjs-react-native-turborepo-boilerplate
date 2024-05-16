@@ -27,6 +27,7 @@
     "ts-contract": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    "database": "*"
+    "database": "*",
+    "tailwind-config": "*"
   }
 }

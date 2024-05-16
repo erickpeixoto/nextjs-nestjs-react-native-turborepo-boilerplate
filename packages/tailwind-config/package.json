@@ -1,0 +1,11 @@
+{
+  "name": "tailwind-config",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
