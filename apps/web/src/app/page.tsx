@@ -1,18 +1,24 @@
-"use client";
-import { client } from "ts-contract";
+import { dehydrate } from '@tanstack/query-core';
+import { getQueryClient } from './react-query-utils/get-query-client';
+import { Hydrate } from './react-query-utils/hydrate.client';
+import { ClientComponent } from './client-component';
+import { apiClientQuery } from 'ts-contract';
 
 
-export default function Page() {
-  const { data } = client.users.getAll.useQuery(["users"]);
+export default async function Test() {
+  const client = getQueryClient();
+  await apiClientQuery.users.getAll.prefetchQuery(
+    client,
+    ['TEST']
+   
+  );
+  const dehydratedState = dehydrate(client);
+
   return (
-    <div className="container">
-      <h1 className="text-red-500 p-5">Lets see</h1>
-      <ul>
-        {JSON.stringify({ data })}
-        {/* {data.map((user: any) => (
-          <li key={user.id}>{user.name}</li>
-        ))} */}
-      </ul>
-    </div>
+    <main>
+      <Hydrate state={dehydratedState}>
+        <ClientComponent />
+      </Hydrate>
+    </main>
   );
 }

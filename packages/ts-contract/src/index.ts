@@ -1,5 +1,6 @@
-import { initQueryClient } from "@ts-rest/react-query";
 import { initContract } from "@ts-rest/core";
+import { initQueryClient } from "@ts-rest/react-query";
+import { initClient } from "@ts-rest/core";
 import { z } from "zod";
 
 const c = initContract();
@@ -21,8 +22,7 @@ export const contract = c.router(
         path: "/users",
         responses: {
           200: z.array(userSchema),
-        }
-       
+        },
       },
       create: {
         method: "POST",
@@ -33,19 +33,23 @@ export const contract = c.router(
           email: z.string(),
         }),
         responses: {
-          200: userSchema,
+          201: userSchema,
         },
       },
     },
   },
-
   {
     pathPrefix: "/api",
-    strictStatusCode: true,
+    strictStatusCodes: true,
   }
 );
 
-export const client = initQueryClient(contract, {
+export const apiClient = initClient(contract, {
+  baseUrl: "http://localhost:3000",
+  baseHeaders: {},
+});
+
+export const apiClientQuery = initQueryClient(contract, {
   baseUrl: "http://localhost:3000",
   baseHeaders: {},
 });

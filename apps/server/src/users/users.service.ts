@@ -15,6 +15,7 @@ export class UsersService {
     }
 
     getAll() {
+      console.log('getting all users')
       return this.prisma.user.findMany();
     }
 }
