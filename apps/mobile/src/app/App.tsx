@@ -8,7 +8,7 @@ export default function App() {
   return (
 
       <View style={styles.container}>
-        <Text className="text-identity">Hey there hi</Text>
+        <Text className="text-red-500 container">Hey there hi</Text>
         <StatusBar style="auto" />
       </View>
 

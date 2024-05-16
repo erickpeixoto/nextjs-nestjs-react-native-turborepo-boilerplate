@@ -7,7 +7,7 @@
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "strict": true,
-    "rootDir": "./src",
+    "rootDir": ".",
     "outDir": "dist",
     "types": ["node"],
     "declaration": true
