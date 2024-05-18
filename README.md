@@ -1,81 +1,68 @@
-# Turborepo starter
+# Project Name
 
-This is an official starter Turborepo.
+A brief description of what this project does and who it's for. Include any relevant badges or status indicators.
 
-## Using this example
 
-Run the following command:
+### Prerequisites
 
-```sh
-npx create-turbo@latest
-```
+List everything needed to get your project up and running.
 
-## What's inside?
+### Installation
 
-This Turborepo includes the following packages/apps:
+A step-by-step series of examples that tell you how to get a development environment running.
 
-### Apps and Packages
+## Contributing
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Please ensure to update tests as appropriate.
 
-### Utilities
+## Documentation
 
-This Turborepo has some additional tools already setup for you:
+For more details on using TurboRepo, setting up environments, and building apps with Expo, visit:
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+- [TurboRepo Documentation](https://turborepo.org/docs)
+- [Expo Documentation](https://docs.expo.dev/)
 
-### Build
+## Screenshots
 
-To build all apps and packages, run the following command:
+Here you can add screenshots for different areas of your application, which helps others understand what the project looks like and how it functions.
 
-```
-cd my-turborepo
-pnpm build
-```
+### Example: Mobile Dashboard
 
-### Develop
+![Mobile Dashboard Screenshot](path/to/mobile_dashboard_screenshot.png)
 
-To develop all apps and packages, run the following command:
+### Example: Mobile Settings
 
-```
-cd my-turborepo
-pnpm dev
-```
+![Mobile Settings Screenshot](path/to/mobile_settings_screenshot.png)
 
-### Remote Caching
+## Deployment
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+Add additional notes about how to deploy this on a live system.
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+## Usage
 
-```
-cd my-turborepo
-npx turbo login
-```
+Explain how to run the automated tests for this system, and how to start the development server for React Native.
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+## Built With
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+* [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+* [React Native](https://reactnative.dev/) - A framework for building native apps using React
+* [Expo](https://expo.dev/) - An open-source platform for making universal native apps
+* [Next.js](https://nextjs.org/) - The React framework used for scalable web applications
+* [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
+* [TypeScript](https://www.typescriptlang.org/) - Used for scalable web and mobile apps
 
-```
-npx turbo link
-```
+## Authors
 
-## Useful Links
+* **Erick Eduardo** - [Github](https://github.com/erickepeixoto)
 
-Learn more about the power of Turborepo:
+## License
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc

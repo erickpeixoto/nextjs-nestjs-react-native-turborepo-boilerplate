@@ -45,11 +45,11 @@ export const contract = c.router(
 );
 
 export const apiClient = initClient(contract, {
-  baseUrl: "http://localhost:3000",
+  baseUrl: "http://192.168.68.55:3000",
   baseHeaders: {},
 });
 
 export const apiClientQuery = initQueryClient(contract, {
-  baseUrl: "http://localhost:3000",
+  baseUrl: "http://192.168.68.55:3000",
   baseHeaders: {},
 });

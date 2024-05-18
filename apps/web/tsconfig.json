@@ -5,13 +5,17 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "next.config.js",
     "**/**/*.ts",
-    "**/**/*.tsx",
+    "**/**/**/**/*.tsx",
     ".next/types/**/*.ts"
 , "tailwind.config.ts"  ],
   "exclude": ["node_modules"]

@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "native",
-    "slug": "native",
+    "name": "My app",
+    "slug": "app-test",
+    "scheme": "native",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,10 +19,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.erickepeixoto.myapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0366a445-2ef9-4840-8c0a-8ad473b6a206"
+      }
+    },
+    "owner": "erickepeixoto"
   }
 }
