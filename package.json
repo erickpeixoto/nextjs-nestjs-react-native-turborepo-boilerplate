@@ -1,5 +1,5 @@
 {
-  "name": "@leaf-genius/monorepo",
+  "name": "@boilerplate/monorepo",
   "private": true,
   "scripts": {
     "build": "turbo build",
